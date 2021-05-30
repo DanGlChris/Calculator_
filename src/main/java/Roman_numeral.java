@@ -102,7 +102,8 @@ public class Roman_numeral {
     }
     public String substract_to(Roman_numeral a){
         int value = this.getValue() - a.getValue();
-        if(value > 0){
+        if(value == 0) throw new ArithmeticException();
+        else if(value > 0){
             return Roman_Numeral_Sign.Roman_value_of(value);
         }else return "-" + Roman_Numeral_Sign.Roman_value_of(value);
     }
